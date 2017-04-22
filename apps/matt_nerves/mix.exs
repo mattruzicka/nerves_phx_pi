@@ -50,7 +50,9 @@ defmodule MattNerves.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   def deps do
-    [{:nerves, "~> 0.5.0", runtime: false}] ++
+    [{:nerves, "~> 0.5.0", runtime: false},
+     {:matt_phx, in_umbrella: true},
+     {:nerves_networking, "~> 0.6.0"}] ++
     deps(@target)
   end
 
